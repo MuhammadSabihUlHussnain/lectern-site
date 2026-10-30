@@ -1,0 +1,40 @@
+:root {
+  color-scheme: light dark;
+  --bg: #f2f2f7;
+  --card: #ffffff;
+  --text: #000000;
+  --muted: #6c6c70;
+  --tint: #1e6ef4;
+  --line: rgba(60, 60, 67, 0.2);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #000000;
+    --card: #1c1c1e;
+    --text: #ffffff;
+    --muted: #aeaeb2;
+    --tint: #5cb8ff;
+    --line: rgba(84, 84, 88, 0.6);
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 17px/1.5 system-ui, -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+main { max-width: 720px; margin: 0 auto; padding: 48px 20px 64px; }
+header { display: flex; align-items: center; gap: 14px; margin-bottom: 28px; }
+header img { width: 52px; height: 52px; border-radius: 12px; }
+h1 { font-size: 34px; line-height: 1.2; margin: 0; letter-spacing: -0.01em; }
+h2 { font-size: 20px; margin: 32px 0 8px; }
+p, li { color: var(--text); }
+.lead { font-size: 20px; color: var(--muted); margin: 0 0 24px; }
+.card { background: var(--card); border-radius: 18px; padding: 20px 24px; margin: 20px 0; }
+.card ul { margin: 8px 0 0; padding-left: 1.2em; }
+.card li + li { margin-top: 6px; }
+a { color: var(--tint); }
+nav { display: flex; gap: 18px; flex-wrap: wrap; margin-top: 40px; padding-top: 18px; border-top: 0.5px solid var(--line); font-size: 15px; }
+.muted { color: var(--muted); font-size: 15px; }
